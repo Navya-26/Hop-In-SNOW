@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope,spUtil,$http,$timeout,$rootScope){
+
+$scope.foo=function(){
+var c=this;
+c.data.id=document.getElementById('empid').value;
+JSON.stringify(c.data.id);
+c.data.df=document.getElementById('durationfrom').value;
+JSON.stringify(c.data.df);
+c.data.dt=document.getElementById('durationto').value;
+JSON.stringify(c.data.dt);
+c.data.tod=document.getElementById('time').value;
+JSON.stringify(c.data.time);
+c.data.froml=document.getElementById('from').value;
+JSON.stringify(c.data.froml);
+c.data.tol=document.getElementById('to').value;
+JSON.stringify(c.data.tol);
+	alert(c.data.time);
+c.server.update();
+};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>book_seat_form</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Book seat form</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+ if (input) {
+data.u=input.f;
+data.p=input.g;
+
+// console.log(p);
+      var gr = new GlideRecord('x_474745_transport_bus_admins');
+//console.log("hello");
+//alert('hi');
+      gr.initialize();
+
+
+      gr.emp_id = input.id;
+      gr.duration_from = input.df;
+	    gr.duration_to=input.dt;
+	    gr.time_of_day=input.time;
+	    gr.to=input.from1;
+	    gr.from=input.to1;
+
+
+      gr.insert();
+
+  }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-25 17:15:14</sys_created_on>
+        <sys_id>7744b7c90777c0101223f16c7c1ed01f</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Book seat form</sys_name>
+        <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+        <sys_update_name>sp_widget_7744b7c90777c0101223f16c7c1ed01f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-25 17:50:50</sys_updated_on>
+        <template><![CDATA[<html>
+<body style="background-color:lightgrey">
+<br><br><br><br><br><br>
+<center>
+<h1>Book Seat</h1>
+  Emp ID:<input type="text" id="empid"><br><br>
+  Duration from:<input type="date" id="durationfrom"><br><br>
+  Duration to:<input type="date" id="durationto"><br><br>
+  Time of day :<select id="time">
+  <option>morning</option>
+  <option>evening</option>
+  <option>morning and evening</option>
+  </select><br><br>
+  From:<select id="from">
+ 
+  <option value="patancheru">patancheru</option>
+  <option value="mehdipatnam">mehdipatnam</option>
+  <option value="kphb">kphb</option>
+  <option value="shaikpet">shaikpet</option>
+  <option value="office">office</option>
+  </select><br><br>
+  To:<select id="to">
+ 
+  <option value="patancheru">patancheru</option>
+  <option value="mehdipatnam">mehdipatnam</option>
+  <option value="kphb">kphb</option>
+  <option value="shaikpet">shaikpet</option>
+  <option value="office">office</option>
+  </select>
+  <button type="button" ng-click="foo()">
+    SubmitDetails
+  </button>
+</center>
+</body>
+</html>
+]]></template>
+    </sp_widget>
+</record_update>

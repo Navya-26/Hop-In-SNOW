@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Booking and Cost" section_id="c0410c9c073340101223f16c7c1ed05d" sys_domain="global" table="x_474745_transport_employees_list" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>no_of_times_booked</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-22 15:37:52</sys_created_on>
+            <sys_id>5c410c9c073340101223f16c7c1ed0b0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Booking and Cost" display_value="Booking and Cost" name="x_474745_transport_employees_list" sys_domain="global" view="Default view">c0410c9c073340101223f16c7c1ed05d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-22 15:37:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_cost</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-22 15:37:52</sys_created_on>
+            <sys_id>d0410c9c073340101223f16c7c1ed0b1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Booking and Cost" display_value="Booking and Cost" name="x_474745_transport_employees_list" sys_domain="global" view="Default view">c0410c9c073340101223f16c7c1ed05d</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-22 15:37:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Booking and Cost</caption>
+            <header>false</header>
+            <name>x_474745_transport_employees_list</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-22 15:37:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c0410c9c073340101223f16c7c1ed05d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Booking and Cost</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+            <sys_update_name>sys_ui_section_c0410c9c073340101223f16c7c1ed05d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-22 15:37:51</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</application>
+        <file_path/>
+        <instance_id>3eae1020dbbe44908aea21c4059619c5</instance_id>
+        <instance_name>dev99035</instance_name>
+        <name>sys_ui_section_c0410c9c073340101223f16c7c1ed05d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Booking and Cost" section_id="c0410c9c073340101223f16c7c1ed05d" sys_domain="global" table="x_474745_transport_employees_list" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>no_of_times_booked</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-22 15:37:52</sys_created_on><sys_id>5c410c9c073340101223f16c7c1ed0b0</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Booking and Cost" display_value="Booking and Cost" name="x_474745_transport_employees_list" sys_domain="global" view="Default view">c0410c9c073340101223f16c7c1ed05d</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-22 15:37:52</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>total_cost</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-22 15:37:52</sys_created_on><sys_id>d0410c9c073340101223f16c7c1ed0b1</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Booking and Cost" display_value="Booking and Cost" name="x_474745_transport_employees_list" sys_domain="global" view="Default view">c0410c9c073340101223f16c7c1ed05d</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-22 15:37:52</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Booking and Cost</caption><header>false</header><name>x_474745_transport_employees_list</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-03-22 15:37:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c0410c9c073340101223f16c7c1ed05d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Booking and Cost</sys_name><sys_overrides/><sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package><sys_policy/><sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope><sys_update_name>sys_ui_section_c0410c9c073340101223f16c7c1ed05d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-03-22 15:37:51</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>1655895712</payload_hash>
+        <record_name>All Employees List</record_name>
+        <reverted_from/>
+        <source>308932cc07bb00101223f16c7c1ed0b6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-22 15:37:52</sys_created_on>
+        <sys_id>5c410c9c073340101223f16c7c1ed0b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17102e4aa270000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-22 15:37:52</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>d4410c9c3b3340105f08d19422ab81b2</update_guid>
+        <update_guid_history>d4410c9c3b3340105f08d19422ab81b2:1655895712</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-22 16:46:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>0857da2007e1443c826e3fda6a4764f9</sys_id>
+        <sys_metadata>c0410c9c073340101223f16c7c1ed05d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Booking and Cost</sys_name>
+        <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+        <sys_parent display_value="">f3cdb70c073340101223f16c7c1ed020</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+        <sys_scope_delete display_value="">b1b1cceca7b745208365174adb510100</sys_scope_delete>
+        <sys_update_name>sys_ui_section_c0410c9c073340101223f16c7c1ed05d</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_c0410c9c073340101223f16c7c1ed05d">5c410c9c073340101223f16c7c1ed0b2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-22 16:46:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

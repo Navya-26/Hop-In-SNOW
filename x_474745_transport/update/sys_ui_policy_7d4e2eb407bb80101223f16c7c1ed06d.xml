@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_474745_transport_bus_admins">time_of_day=morning and evening^EQ<item display_value="morning and evening" endquery="false" field="time_of_day" goto="false" newquery="false" operator="=" or="false" value="morning and evening"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>To check morning and evening</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-24 17:31:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7d4e2eb407bb80101223f16c7c1ed06d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>To check morning and evening</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+        <sys_update_name>sys_ui_policy_7d4e2eb407bb80101223f16c7c1ed06d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-24 17:31:15</sys_updated_on>
+        <table>x_474745_transport_bus_admins</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

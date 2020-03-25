@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Transport">778b764407bf00101223f16c7c1ed0d1</application>
+        <filter/>
+        <name>Buses Lists</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_474745_transport.buses_list_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-23 06:59:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6f445f58073b40101223f16c7c1ed07b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Buses Lists</sys_name>
+        <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+        <sys_update_name>sys_ui_module_6f445f58073b40101223f16c7c1ed07b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-23 06:59:58</sys_updated_on>
+        <table>x_474745_transport_buses_list</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

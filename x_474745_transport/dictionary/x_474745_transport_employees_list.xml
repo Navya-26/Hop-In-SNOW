@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Employees List" max_length="40" name="x_474745_transport_employees_list" sizeclass="2" type="collection">
+        <element default="0" label="Cost" max_length="40" name="cost" type="integer"/>
+        <element label="email" max_length="40" name="email" type="string"/>
+        <element display="true" label="empid" max_length="32" name="empid" reference="sys_user" type="reference"/>
+        <element default="0" label="No of times booked" max_length="40" name="no_of_times_booked" type="integer"/>
+        <element label="orgid" max_length="32" name="orgid" reference="x_474745_transport_organisation" type="reference"/>
+        <index name="index">
+            <element name="empid"/>
+        </index>
+        <index name="index2">
+            <element name="orgid"/>
+        </index>
+    </element>
+</database>

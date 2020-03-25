@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Routes List" max_length="40" name="x_474745_transport_routes" sizeclass="2" type="collection">
+        <element label="Bus ID" max_length="32" name="bus_id" reference="x_474745_transport_buses_list" type="reference"/>
+        <element label="routes" max_length="800" name="routes" type="data_structure"/>
+        <index name="index">
+            <element name="bus_id"/>
+        </index>
+    </element>
+</database>

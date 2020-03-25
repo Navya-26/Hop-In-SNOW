@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Organisations List" max_length="40" name="x_474745_transport_organisation" sizeclass="3" type="collection">
+        <element default="0" label="No. of buses" max_length="40" name="no_of_buses" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Organisation ID" max_length="40" name="number" type="string"/>
+        <element label="Organisation Name" max_length="40" name="organisation_name" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Buses List" max_length="40" name="x_474745_transport_buses_list" sizeclass="3" type="collection">
+        <element label="Bus Reg No" max_length="40" name="bus_reg_no" type="string"/>
+        <element label="End point" max_length="40" name="end_point" type="string"/>
+        <element label="No of seats available" max_length="40" name="no_of_seats_available" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Bus ID" max_length="40" name="number" type="string"/>
+        <element label="Organisation ID" max_length="32" name="organisation_id" reference="x_474745_transport_organisation" type="reference"/>
+        <element label="Start point" max_length="40" name="start_point" type="string"/>
+        <index name="index">
+            <element name="organisation_id"/>
+        </index>
+    </element>
+</database>

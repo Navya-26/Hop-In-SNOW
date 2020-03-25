@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="from" table="x_474745_transport_bus_admins" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>from</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>patancheru</label>
+            <language>en</language>
+            <name>x_474745_transport_bus_admins</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-24 17:43:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fc11ba3807bb80101223f16c7c1ed0c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-24 17:43:01</sys_updated_on>
+            <value>patancheru</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>from</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>mehdipatnam</label>
+            <language>en</language>
+            <name>x_474745_transport_bus_admins</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-24 17:43:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3011ba3807bb80101223f16c7c1ed0c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-24 17:43:01</sys_updated_on>
+            <value>mehdipatnam</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>from</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>shaikpet</label>
+            <language>en</language>
+            <name>x_474745_transport_bus_admins</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-24 17:43:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bc11ba3807bb80101223f16c7c1ed0c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-24 17:43:01</sys_updated_on>
+            <value>shaikpet</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>from</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>kphb</label>
+            <language>en</language>
+            <name>x_474745_transport_bus_admins</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-24 17:43:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3c11ba3807bb80101223f16c7c1ed0ca</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-24 17:43:01</sys_updated_on>
+            <value>kphb</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>from</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>office</label>
+            <language>en</language>
+            <name>x_474745_transport_bus_admins</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-24 17:43:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b811ba3807bb80101223f16c7c1ed0cb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-24 17:43:01</sys_updated_on>
+            <value>office</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>from</element>
+            <name>x_474745_transport_bus_admins</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-03-24 17:43:01</sys_created_on>
+            <sys_id>3811ba3807bb80101223f16c7c1ed0c8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>from</sys_name>
+            <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+            <sys_update_name>sys_choice_x_474745_transport_bus_admins_from</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-03-24 17:43:01</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
