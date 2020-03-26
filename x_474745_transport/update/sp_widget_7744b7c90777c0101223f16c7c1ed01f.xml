@@ -5,19 +5,19 @@
 
 $scope.foo=function(){
 var c=this;
-c.data.id=document.getElementById('empid').value;
-JSON.stringify(c.data.id);
+var user = $('#user').select2('val');
+c.data.id=user;
+//JSON.stringify(c.data.id);
 c.data.df=document.getElementById('durationfrom').value;
 JSON.stringify(c.data.df);
 c.data.dt=document.getElementById('durationto').value;
 JSON.stringify(c.data.dt);
 c.data.tod=document.getElementById('time').value;
-JSON.stringify(c.data.time);
-c.data.froml=document.getElementById('from').value;
+JSON.stringify(c.data.tod);
+c.data.froml=document.getElementById('time1').value;
 JSON.stringify(c.data.froml);
-c.data.tol=document.getElementById('to').value;
+c.data.tol=document.getElementById('time2').value;
 JSON.stringify(c.data.tol);
-	alert(c.data.time);
 c.server.update();
 };
 }]]></client_script>
@@ -47,17 +47,55 @@ data.p=input.g;
 //alert('hi');
       gr.initialize();
 
-
-      gr.emp_id = input.id;
+      gr.empid = input.id;
+	
       gr.duration_from = input.df;
 	    gr.duration_to=input.dt;
-	    gr.time_of_day=input.time;
-	    gr.to=input.from1;
-	    gr.from=input.to1;
-
-
+	    gr.time_of_day=input.tod;
+	    gr.to=input.froml;
+	    gr.from=input.tol;
       gr.insert();
+	 var loc;
+	
+/*var time=input.tod;
+	if(time=='evening')
+		{
+			loc=input.tol;
+		}
+	else
+		{
+			loc=input.froml;
+		}
 
+		
+	var a=[];
+
+	var gr1 = new GlideRecord('x_474745_transport_routes');
+gr1.query();
+while(gr1.next()) {
+//gs.info("DATA OBJECT : " +gr.getValue('routes'));
+var jsonData = gr1.getValue('routes');
+//gs.info ("JSON2  :" +JSON.parse(jsonData));
+var j2=JSON.parse(jsonData);
+//gs.info ("JSON1  :" +j2.properties);
+var j2name = j2.properties;
+	
+for (var i =0 ; i< j2name.length; i ++) {
+y=j2name[i].name;
+JSON.stringify(y);
+//gs.info(y);
+	if(loc.localeCompare(y)==0)
+	{
+
+		a.push(gr1.bus_id.getDisplayValue());
+    //gs.info(gr.getValue('number'));		
+break;
+	}
+}
+}
+	//gs.addInfoMessage(a);
+	alert(a);
+*/
   }
 })();]]></script>
         <servicenow>false</servicenow>
@@ -65,43 +103,53 @@ data.p=input.g;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-03-25 17:15:14</sys_created_on>
         <sys_id>7744b7c90777c0101223f16c7c1ed01f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Book seat form</sys_name>
         <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
         <sys_policy/>
         <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
         <sys_update_name>sp_widget_7744b7c90777c0101223f16c7c1ed01f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-03-25 17:50:50</sys_updated_on>
+        <sys_updated_on>2020-03-26 08:46:31</sys_updated_on>
         <template><![CDATA[<html>
 <body style="background-color:lightgrey">
 <br><br><br><br><br><br>
 <center>
 <h1>Book Seat</h1>
-  Emp ID:<input type="text" id="empid"><br><br>
-  Duration from:<input type="date" id="durationfrom"><br><br>
-  Duration to:<input type="date" id="durationto"><br><br>
-  Time of day :<select id="time">
-  <option>morning</option>
-  <option>evening</option>
-  <option>morning and evening</option>
+  Emp ID:<!--<input type="text" id="empid">-->
+  <sn-record-picker
+                    id="user"
+                    field="user"
+                    table="'x_474745_transport_employees_list'"
+                    display-field="'empid'"
+                    value-field="'empid'"
+                    search-fields="'empid'"
+                    page-size="100">
+  </sn-record-picker>
+<br><br>
+  Duration from:<input type="date" value="2020-03-26" id="durationfrom"><br><br>
+  Duration to:<input type="date" value="2020-03-28" id="durationto"><br><br>
+  Time of day :
+  <select id="time">
+    <option value="morning">morning
+    <option value="evening">evening
+    <option value="morning and evening">morning and evening
   </select><br><br>
-  From:<select id="from">
- 
-  <option value="patancheru">patancheru</option>
-  <option value="mehdipatnam">mehdipatnam</option>
-  <option value="kphb">kphb</option>
-  <option value="shaikpet">shaikpet</option>
-  <option value="office">office</option>
+ From:<select id="time1">
+  <option value="patancheru">patancheru
+  <option value="mehdipatnam">mehdipatnam
+  <option value="kphb">kphb
+  <option value="shaikpet">shaikpet
+  <option value="office">office
   </select><br><br>
-  To:<select id="to">
- 
+  To:<select id="time2">
   <option value="patancheru">patancheru</option>
   <option value="mehdipatnam">mehdipatnam</option>
   <option value="kphb">kphb</option>
   <option value="shaikpet">shaikpet</option>
   <option value="office">office</option>
   </select>
+  <br><br>
   <button type="button" ng-click="foo()">
     SubmitDetails
   </button>

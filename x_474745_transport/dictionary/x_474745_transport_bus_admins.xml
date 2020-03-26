@@ -2,8 +2,8 @@
     <element label="Bus Admins" max_length="40" name="x_474745_transport_bus_admins" sizeclass="2" type="collection">
         <element label="duration from" max_length="40" name="duration_from" type="glide_date"/>
         <element label="duration to" max_length="40" name="duration_to" type="glide_date"/>
-        <element label="Empid" max_length="32" name="empid" reference="x_474745_transport_employees_list" type="reference"/>
-        <element choice="1" label="from" max_length="40" name="from" type="choice">
+        <element label="Empid" max_length="32" name="empid" type="string"/>
+        <element choice="1" label="from" max_length="40" name="from" type="string">
             <choice>
                 <element inactive_on_update="false" label="patancheru" sequence="0" value="patancheru"/>
                 <element inactive_on_update="false" label="mehdipatnam" sequence="1" value="mehdipatnam"/>
@@ -13,14 +13,14 @@
             </choice>
         </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element choice="1" label="Time of day" max_length="40" name="time_of_day" type="choice">
+        <element choice="1" label="Time of day" max_length="40" name="time_of_day" type="string">
             <choice>
                 <element inactive_on_update="false" label="morning" sequence="0" value="morning"/>
                 <element inactive_on_update="false" label="evening" sequence="1" value="evening"/>
                 <element inactive_on_update="false" label="morning and evening" sequence="2" value="morning and evening"/>
             </choice>
         </element>
-        <element choice="1" label="To" max_length="40" name="to" type="choice">
+        <element choice="1" label="To" max_length="40" name="to" type="string">
             <choice>
                 <element inactive_on_update="false" label="patencheru" sequence="0" value="patencheru"/>
                 <element inactive_on_update="false" label="mehdipatnam" sequence="1" value="mehdipatnam"/>

@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>empid</column_label>
+        <column_label>Empid</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -54,14 +54,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-03-25 09:55:18</sys_created_on>
         <sys_id>83de0ac907b3c0101223f16c7c1ed07d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>empid</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Empid</sys_name>
         <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
         <sys_policy/>
         <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
         <sys_update_name>sys_dictionary_x_474745_transport_employees_list_empid</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-03-25 10:27:46</sys_updated_on>
+        <sys_updated_on>2020-03-26 07:10:22</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
