@@ -19,8 +19,16 @@ JSON.stringify(c.data.froml);
 c.data.tol=document.getElementById('time2').value;
 JSON.stringify(c.data.tol);
 c.server.update();
+	c.display = function() {						
+		c.server.update().then(function(data) {		
+			
+		})		
+	}
+	
+	c.display();
 };
-}]]></client_script>
+}
+]]></client_script>
         <controller_as>c</controller_as>
         <css/>
         <data_table>sp_instance</data_table>
@@ -57,7 +65,7 @@ data.p=input.g;
       gr.insert();
 	 var loc;
 	
-/*var time=input.tod;
+var time=input.tod;
 	if(time=='evening')
 		{
 			loc=input.tol;
@@ -94,8 +102,12 @@ break;
 }
 }
 	//gs.addInfoMessage(a);
-	alert(a);
-*/
+	//alert(a);
+	 //console.log(a);
+	 data.message = a;
+	 var u=gs.getUser();
+	console.lo(u.getDisplayName());
+
   }
 })();]]></script>
         <servicenow>false</servicenow>
@@ -103,14 +115,14 @@ break;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-03-25 17:15:14</sys_created_on>
         <sys_id>7744b7c90777c0101223f16c7c1ed01f</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>Book seat form</sys_name>
         <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
         <sys_policy/>
         <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
         <sys_update_name>sp_widget_7744b7c90777c0101223f16c7c1ed01f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-03-26 08:46:31</sys_updated_on>
+        <sys_updated_on>2020-03-26 11:56:43</sys_updated_on>
         <template><![CDATA[<html>
 <body style="background-color:lightgrey">
 <br><br><br><br><br><br>
@@ -150,9 +162,12 @@ break;
   <option value="office">office</option>
   </select>
   <br><br>
-  <button type="button" ng-click="foo()">
+  <button type="button" ng-click="foo()" onclick="location.href='https://dev99035.service-now.com/$spd.do#/sp/preview/desktop/book_seat'">
     SubmitDetails
   </button>
+  <h1>
+    {{ c.data.message}}
+  </h1>
 </center>
 </body>
 </html>

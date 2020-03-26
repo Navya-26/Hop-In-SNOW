@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Bus Admins" max_length="40" name="x_474745_transport_bus_admins" sizeclass="2" type="collection">
+    <element label="Bus Admins" max_length="40" name="x_474745_transport_bus_admins" sizeclass="21" type="collection">
         <element label="duration from" max_length="40" name="duration_from" type="glide_date"/>
         <element label="duration to" max_length="40" name="duration_to" type="glide_date"/>
         <element label="Empid" max_length="32" name="empid" type="string"/>
