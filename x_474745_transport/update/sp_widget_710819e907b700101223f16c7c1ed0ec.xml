@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[/*function($scope,spUtil,$http,$timeout,$rootScope){
+
+$scope.fun=function(){
+var c=this;
+	//alert("hi");
+	c.data.i="1";
+	c.server.update();
+	c.display = function() {						
+		c.server.update().then(function(data) {		
+			
+		})		
+	}
+
+};
+}*/
+function() {
+  /* widget controller */
+  var c = this;
+	c.data.i="hello";
+	//alert("h1");
+	c.server.update();
+	c.display = function() {						
+		c.server.update().then(function(data) {		
+			
+		})		
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>buses_list</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>buses list</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+if(input){ 
+	var session=gs.getSession();
+	var emp=session.getClientData('name');
+	var bus=session.getClientData('buses');
+	var count=session.getClientData('count');
+  var xp=input.i;
+	data.empid=emp;
+	data.buses=bus;
+	data.count=count;
+	
+//	var bus=busarr[0];
+	//var count=countarr[0];
+		console.log(emp);
+	console.log(bus);
+	console.log(count);
+	var gr1 = new GlideRecord('x_474745_transport_routes');
+gr1.query();
+while(gr1.next()) {
+var b = gr1.getDisplayValue('bus_id');
+//gs.info(b);
+if(b.localeCompare(bus)==0)
+{
+       count=count-1;
+  gr1.setValue('seatcnt',count);
+	var reg=gr1.getDisplayValue('regno');
+	data.regno=reg;
+	gr1.update();
+  break;
+				
+}
+}
+	var gr2 = new GlideRecord('x_474745_transport_employees_list');
+  gr2.query();
+	while(gr2.next()) {
+  var n = gr2.getDisplayValue('empid');
+		if(n.localeCompare(emp)==0)
+			{
+				var z=gr2.getValue('no_of_times_booked');
+                                z++;
+				gr2.setValue('no_of_times_booked',z);
+				gr2.update();
+				console.log(gr2.getDisplayValue('no_of_times_booked'));
+				break;
+			}
+	}
+
+
+}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-26 19:09:24</sys_created_on>
+        <sys_id>710819e907b700101223f16c7c1ed0ec</sys_id>
+        <sys_mod_count>70</sys_mod_count>
+        <sys_name>buses list</sys_name>
+        <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+        <sys_update_name>sp_widget_710819e907b700101223f16c7c1ed0ec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-27 10:09:53</sys_updated_on>
+        <template><![CDATA[<style>
+.ima{
+  border-radius:50%;
+  }
+  .button{
+padding: 3%;
+margin-top: 5%;
+/*width: 40%;*/
+background-color: #293E40;
+font-size: 15px;
+color: white;
+}
+</style>
+<div>
+<!-- your widget template -->
+  <center>
+  <img class="ima" src="https://www.electrive.com/wp-content/uploads/2019/11/byd-k7m-elektrobus-electric-bus-2019-01-min.png" width="250" height="250">
+  <br><br>
+
+    
+  <p>
+    <h2>
+      Details
+    </h2><br>
+    <h4>
+    
+    Name : {{c.data.empid}}<br>
+    Bus ID : {{c.data.buses}}<br>
+    Bus Registration No. : {{c.data.regno}}<br>
+    No. of seats available : {{c.data.count}}<br>
+    </h4>
+  </p>
+    <button class="button" type="button" ng-click="fun()" onclick="location.href='https://dev99035.service-now.com/$spd.do#/sp/preview/mobile/confirmationseat'">
+    Confirm your Seat
+  </button>
+    <br><br>
+  </center>
+</div>]]></template>
+    </sp_widget>
+</record_update>

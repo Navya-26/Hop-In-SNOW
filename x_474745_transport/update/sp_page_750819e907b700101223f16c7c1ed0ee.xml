@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>buses_list</id>
+        <internal>false</internal>
+        <public>false</public>
+        <roles/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-26 19:09:24</sys_created_on>
+        <sys_id>750819e907b700101223f16c7c1ed0ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>buses_list</sys_name>
+        <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+        <sys_update_name>sp_page_750819e907b700101223f16c7c1ed0ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-26 19:09:24</sys_updated_on>
+        <title>buses list - Test Page</title>
+    </sp_page>
+    <sys_translated_text action="delete_multiple" query="documentkey=750819e907b700101223f16c7c1ed0ee"/>
+</record_update>
