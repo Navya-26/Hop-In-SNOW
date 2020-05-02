@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Employee login" max_length="40" name="x_474745_transport_employee_login" sizeclass="3" type="collection">
+        <element label="Password" max_length="40" name="password" type="string"/>
+        <element label="Username" max_length="40" name="username" type="string"/>
+    </element>
+</database>

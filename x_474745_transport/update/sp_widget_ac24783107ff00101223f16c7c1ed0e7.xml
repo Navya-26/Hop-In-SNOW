@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope,spUtil,$http,$timeout,$rootScope){
+
+$scope.login=function(){
+var c=this;
+c.data.username=document.getElementById('uname').value;
+JSON.stringify(c.data.username);
+c.data.password=document.getElementById('pwd').value;
+JSON.stringify(c.data.password);
+	/*alert(c.data.username);
+	alert(c.data.password);*/
+c.server.update();
+
+};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>busadminlogin</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>busadminlogin</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+ if(input){
+	/* var gr = new GlideRecord('x_474745_transport_employee_login');
+	gr.addQuery('username', input.username);
+  gr.addQuery('password', input.password);
+  gr.query();*/
+
+  /*if(gr.next()==false) {
+		console.log("1");
+//this.Utils.showToast('invalid');
+		//return false;
+  } 
+	 else {*/
+		 //console.log("2");
+		/* var session=gs.getSession();
+		session.putClientData('name',input.username);
+	 console.log(session.getClientData('name'));*/
+	
+		//session.putClientData('test2','harry2');
+		//var client=session.getClientData('test1');
+    //gs.setRedirect('https://dev99035.service-now.com/$spd.do#/sp/preview/mobile/book_seat_form');
+	 $location.path='https://dev99035.service-now.com/$spd.do#/sp/preview/mobile/book_seat_form';
+		//gs.setRedirect('google.com'); 
+//}
+ }
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-03-27 11:11:04</sys_created_on>
+        <sys_id>ac24783107ff00101223f16c7c1ed0e7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>busadminlogin</sys_name>
+        <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
+        <sys_update_name>sp_widget_ac24783107ff00101223f16c7c1ed0e7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-03-27 13:57:10</sys_updated_on>
+        <template><![CDATA[<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<title>Authentication</title>
+<style>
+body{
+    background-color:#F5FFFA;
+  color: white;
+}
+.form{
+background-color: #80B6A1;
+  border-radius: 15%;
+width: fit-content;
+margin: 3%;
+margin-top: 30%;
+padding: 3%;
+padding-bottom : 10%;
+}
+input{
+  margin:3%;
+  color:black;
+}
+.button{
+padding: 3%;
+margin-top: 5%;
+width: 40%;
+background-color: #293E40;
+font-size: 20px;
+color: white;
+}
+input{
+border-radius: 10px;
+height: 40px;
+}
+</style>
+</head>
+<body>
+<center>
+<div class="form">
+    <h2><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Bus Admin Login</h2>
+<form method="post">
+<table cellpadding="30">
+  <tr><td><font style="font-size: 25px;">Username : </font></td><td><input type="text" name="uname" id="uname" placeholder="  Enter username" ng-required="true"></td></tr><br>
+  <tr><td></td><td></td></tr>
+  <tr><td><font style="font-size: 25px;">Password :</font> </td><td><input type="password" name="pwd" id="pwd" placeholder=" Enter password" ></td></tr>
+</table>
+<button class="button" ng-click="login()" onclick="location.href='https://dev99035.service-now.com/$spd.do#/sp/preview/mobile/admin_buttons'">Login</button>
+</form>
+</center>
+</body>
+</html>
+]]></template>
+    </sp_widget>
+</record_update>

@@ -5,22 +5,30 @@
 
 $scope.foo=function(){
 var c=this;
-c.data.id=document.getElementById('empid').value;
-JSON.stringify(c.data.id);
+var user = $('#user').select2('val');
+c.data.id=user;
+//JSON.stringify(c.data.id);
 c.data.df=document.getElementById('durationfrom').value;
 JSON.stringify(c.data.df);
 c.data.dt=document.getElementById('durationto').value;
 JSON.stringify(c.data.dt);
 c.data.tod=document.getElementById('time').value;
-JSON.stringify(c.data.time);
-c.data.froml=document.getElementById('from').value;
+JSON.stringify(c.data.tod);
+c.data.froml=document.getElementById('time1').value;
 JSON.stringify(c.data.froml);
-c.data.tol=document.getElementById('to').value;
+c.data.tol=document.getElementById('time2').value;
 JSON.stringify(c.data.tol);
-	alert(c.data.time);
 c.server.update();
+	c.display = function() {						
+		c.server.update().then(function(data) {		
+			
+		})		
+	}
+	
+	//c.display();
 };
-}]]></client_script>
+}
+]]></client_script>
         <controller_as>c</controller_as>
         <css/>
         <data_table>sp_instance</data_table>
@@ -38,25 +46,69 @@ c.server.update();
         <roles/>
         <script><![CDATA[(function() {
  if (input) {
-data.u=input.f;
-data.p=input.g;
 
-// console.log(p);
       var gr = new GlideRecord('x_474745_transport_bus_admins');
-//console.log("hello");
-//alert('hi');
       gr.initialize();
-
-
-      gr.emp_id = input.id;
+      var session=gs.getSession();
+      gr.empid = session.getClientData('name');
       gr.duration_from = input.df;
 	    gr.duration_to=input.dt;
-	    gr.time_of_day=input.time;
-	    gr.to=input.from1;
-	    gr.from=input.to1;
+	    gr.time_of_day=input.tod;
+	    gr.to=input.froml;
+	    gr.from=input.tol;
+      gr.update();
+	 var loc;
+	
+var time=input.tod;
+	if(time=='evening')
+		{
+			loc=input.tol;
+		}
+	else
+		{
+			loc=input.froml;
+		}
 
+		
+	var a=[];var cnt=[];
 
-      gr.insert();
+	var gr1 = new GlideRecord('x_474745_transport_routes');
+gr1.query();
+while(gr1.next()) {
+//gs.info("DATA OBJECT : " +gr.getValue('routes'));
+var jsonData = gr1.getValue('routes');
+//gs.info ("JSON2  :" +JSON.parse(jsonData));
+var j2=JSON.parse(jsonData);
+//gs.info ("JSON1  :" +j2.properties);
+var j2name = j2.properties;
+	
+for (var i =0 ; i< j2name.length; i ++) {
+y=j2name[i].name;
+JSON.stringify(y);
+//gs.info(y);
+	if(loc.localeCompare(y)==0)
+	{
+
+		a.push(gr1.bus_id.getDisplayValue());
+		cnt.push(gr1.seatcnt.getDisplayValue());
+    //gs.info(gr.getValue('number'));		
+break;
+	}
+}
+}
+	 session.putClientData('buses',a);
+	 session.putClientData('count',cnt);
+	//gs.addInfoMessage(a);
+	//alert(a);
+	 //console.log(a);
+	 //data.message = a;
+	 //var u=gs.getUser();
+	//console.log(u.getDisplayName());*/
+	 
+	/*console.log(session.getClientData('test1'));
+	 console.log(session.getClientData('test2'));
+	 console.log(session.getClientData('name'));*/
+	 
 
   }
 })();]]></script>
@@ -65,46 +117,158 @@ data.p=input.g;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-03-25 17:15:14</sys_created_on>
         <sys_id>7744b7c90777c0101223f16c7c1ed01f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>Book seat form</sys_name>
         <sys_package display_value="Transport" source="x_474745_transport">788932cc07bb00101223f16c7c1ed0b3</sys_package>
         <sys_policy/>
         <sys_scope display_value="Transport">788932cc07bb00101223f16c7c1ed0b3</sys_scope>
         <sys_update_name>sp_widget_7744b7c90777c0101223f16c7c1ed01f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-03-25 17:50:50</sys_updated_on>
+        <sys_updated_on>2020-03-27 10:48:03</sys_updated_on>
         <template><![CDATA[<html>
-<body style="background-color:lightgrey">
-<br><br><br><br><br><br>
+<style>    
+
+body {
+  background-color: #F5FFFA !important;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+input[type=date], select {
+  padding : 3%;
+  margin : 2%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit]:hover {
+ /* #45a049;*/
+  background-color: #F0FFF0;
+}
+
+/*div.container {
+  border-radius: 5px;
+  background-color: #2E8B57;
+  padding: 20px;
+}
+*/
+
+.dropdown {
+  float: center;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: green;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 60;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 10px 8px 16px 10px rgba(0.2,0.2,0.2,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: green;
+  padding: 30px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+
+.b {
+  background-color: #293E40;
+  color: white;
+  padding: 14px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 1;
+}
+
+.b:hover {
+  opacity:1;
+}
+</style>
+
+<body>
+<br>
 <center>
-<h1>Book Seat</h1>
-  Emp ID:<input type="text" id="empid"><br><br>
-  Duration from:<input type="date" id="durationfrom"><br><br>
-  Duration to:<input type="date" id="durationto"><br><br>
-  Time of day :<select id="time">
-  <option>morning</option>
-  <option>evening</option>
-  <option>morning and evening</option>
-  </select><br><br>
-  From:<select id="from">
- 
-  <option value="patancheru">patancheru</option>
-  <option value="mehdipatnam">mehdipatnam</option>
-  <option value="kphb">kphb</option>
-  <option value="shaikpet">shaikpet</option>
-  <option value="office">office</option>
-  </select><br><br>
-  To:<select id="to">
- 
-  <option value="patancheru">patancheru</option>
-  <option value="mehdipatnam">mehdipatnam</option>
-  <option value="kphb">kphb</option>
-  <option value="shaikpet">shaikpet</option>
-  <option value="office">office</option>
+<h1>Book Seat</h1><br>
+  <!--Emp ID:<input type="text" id="empid">
+  <sn-record-picker
+                    id="user"
+                    field="user"
+                    table="'x_474745_transport_employees_list'"
+                    display-field="'empid'"
+                    value-field="'empid'"
+                    search-fields="'empid'"
+                    page-size="100">
+  </sn-record-picker>
+<br><br>-->
+  Start Date:<input type="date" id="durationfrom" required><br>
+  End Date:<input type="date" id="durationto" required><br>
+  Select trip :
+  <select id="time">
+    <option></option>
+    <option value="morning">Morning trip
+    <option value="evening">evening trip
+    <option value="morning and evening">Round trip
+  </select><br>
+ Pickup Location:<select id="time1">
+  <option></option>
+  <option value="patancheru">Patancheru
+  <option value="mehdipatnam">Mehdipatnam
+  <option value="rethibowli">Rethibowli
+  <option value="kphb">KPHB
+  <option value="shaikpet">Shaikpet
+  <option value="office">Servicenow Office
+  </select><br>
+  Drop Location:<select id="time2">
+  <option></option>
+  <option value="patancheru">Patancheru</option>
+  <option value="mehdipatnam">Mehdipatnam</option>
+  <option value="rethibowli">Rethibowli
+  <option value="kphb">KPHB</option>
+  <option value="shaikpet">Shaikpet</option>
+  <option value="office">Servicenow Office</option>
   </select>
-  <button type="button" ng-click="foo()">
-    SubmitDetails
+  <br>
+  <button class="b" type="button" ng-click="foo()" onclick="location.href='https://dev99035.service-now.com/$spd.do#/sp/preview/mobile/buses_list'">
+    Check Buses
   </button>
+  <!--<h1>
+    {{ c.data.message}}
+  </h1>-->
 </center>
 </body>
 </html>
